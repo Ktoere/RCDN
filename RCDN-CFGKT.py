@@ -1,3 +1,9 @@
+# @Time    : 2024/9/11 2:27
+# @Author  : zeng
+# @File    : BCDN_cfgkt.py
+# @Software: PyCharm
+
+
 import torch.nn as nn
 from torch import nn
 from models.EmbeddingM import EmbeddingModule
