@@ -32,7 +32,7 @@ class RCDN_cfgkt(nn.Module):
         # Question-response collaborative consistency aware denoising
         self.CC_collaration = RCDN_CC(self.input_embedding,self.input_dim, self.col_student_num, self.hidden_dim)
         #  Question-response evolution consistency aware denoising
-        self.BC_collaration = RCDN_EC(self.input_dim, self.seq_max_length, 4)
+        self.EC_collaration = RCDN_EC(self.input_dim, self.seq_max_length, 4)
 
         self.cfpkt = CFGKT(
             n_concepts=concept_size, n_pid=exercise_size, d_model = input_dim, n_blocks=n_blocks, kq_same=kq_same,
@@ -55,7 +55,7 @@ class RCDN_cfgkt(nn.Module):
         denoising_seq_emb_collaration = torch.mul(seq_emb_collaration, exercice_concept_response_seq)
 
 
-        seq_emb_evolutionary = self.BC_collaration(exercice_concept_response_seq)
+        seq_emb_evolutionary = self.EC_collaration(exercice_concept_response_seq)
         denoising_seq_emb_evolutionary = torch.mul(seq_emb_evolutionary, exercice_concept_response_seq)
 
         # Contrastive learning
