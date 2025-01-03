@@ -306,8 +306,8 @@ if __name__ == "__main__":
         kt_model = BCDN_cfgkt(n_at, n_it,exercise_size,concept_size, input_dim,dropout,hidden_dim,col_student_num,seq_max_length,n_blocks,kq_same,
                  memory_size, final_fc_dim, n_heads,d_ff)
     else:
-        print(f"未查找到模型名: {cfgktcof['train']['name']}")
-        raise RuntimeError("运行时错误：未查找到模型名{dktcof['train']['name']}")
+        print(f"Model name not found: {cfgktcof['train']['name']}")
+        raise RuntimeError("Runtime error: Model name not found{dktcof['train']['name']}")
 
 
     if cfgktcof["optimizer"]["name"] == "adam":
