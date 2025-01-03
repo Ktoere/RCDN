@@ -1,5 +1,4 @@
-# @Time    : 2024/9/11 2:26
-# @Author  : zeng
+# @Time    : 2024/10/12
 # @File    : train_cfgkt.py
 # @Software: PyCharm
 
@@ -317,7 +316,7 @@ if __name__ == "__main__":
     kt_model.to(device)
     criterion.to(device)
 
-    patience = 5
+    patience = 8
     best_val_loss = float('inf')
     patience_counter = 0
     final_result = {}

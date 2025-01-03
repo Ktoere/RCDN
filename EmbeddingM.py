@@ -1,7 +1,7 @@
 # -- coding: utf-8 --
-# @Time : 2024/8/17 14:04
+# @Time : 2024/10/12
 # @File : EmbeddingM.py
-# @Software: PyCharm 2021.2.3
+# @Software: PyCharm
 from torch import nn
 import torch
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
