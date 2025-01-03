@@ -346,8 +346,8 @@ if __name__ == "__main__":
     top_five = list(sorted_dict.items())[:5]
     first_values = [value[0] for _, value in top_five]
     second_values = [value[1] for _, value in top_five]
-    print("协同学生数量：{}".format(col_student_num))
-    print("学习率：{}".format(cfgktcof["optimizer"]["lr"]))
+    print("The number of col：{}".format(col_student_num))
+    # print("learning rate：{}".format(cfgktcof["optimizer"]["lr"]))
     print("lambda_l2:{}".format(cfgktcof["train"]["lambda_l2"]))
     print(modelname + ":")
     print(datasetname + ":")
